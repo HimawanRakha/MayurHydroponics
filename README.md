@@ -25,7 +25,7 @@ Salin `.env.example` menjadi `.env.local` (lokal) atau isi di pengaturan hosting
 
 - **Fakta bisnis** (WhatsApp, alamat, promo, catatan S&K): `src/lib/site-config.ts`
 - **Harga & daftar sayur**: `src/lib/products.ts`
-- **Artikel**: `src/content/articles/*.md` — panduan lengkap di `docs/content-plan.md`
+- **Artikel**: `src/content/articles/*.md`
 - **Foto**: `src/assets/images/` + daftar alt text di `src/lib/images.ts`. Salinan web dari aset asli dibuat ulang dengan `npm run images` (butuh Python + Pillow)
 
 ## Pemeriksaan kualitas
@@ -35,9 +35,6 @@ npm run build && npm start   # di terminal lain:
 npm run qa                   # crawl semua halaman di http://localhost:3000
 ```
 
-## Dokumentasi
+## Catatan
 
-- `docs/project-audit.md` — kondisi awal, keputusan teknis, verifikasi fakta, hasil QA, hal yang belum selesai
-- `docs/design-skill-audit.md` — penerapan 8 design skill, token, kontras
-- `docs/asset-inventory.md` — inventaris aset, izin, aset yang masih dibutuhkan
-- `docs/content-plan.md` — arsitektur informasi, cara menerbitkan artikel, langkah SEO lokal
+Dokumen audit (`docs/`), aset mentah ("Asset Project Website/"), dan konfigurasi agen AI (`.claude/`) hanya disimpan lokal dan tidak masuk repository. `npm run images` membutuhkan folder aset mentah tersebut.

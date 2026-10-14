@@ -40,3 +40,26 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ---- Project-specific: keep the repo to what the website needs ----
+
+# AI agent / editor tooling
+/.claude/
+/AGENTS.md
+/CLAUDE.md
+.vscode/
+.idea/
+
+# Internal planning & audit documents (not needed to build or run the site)
+/docs/
+
+# Raw source assets from the owner (large originals). Web-ready copies live in
+# src/assets/images and public/logo; regenerate with `npm run images` locally.
+/Asset Project Website/
+
+# Local-only helper scripts
+/scripts/screenshot.sh
+
+# OS / misc
+Thumbs.db
+*.log
