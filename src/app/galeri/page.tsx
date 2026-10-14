@@ -10,7 +10,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: "Galeri Kebun",
-  description: "Foto greenhouse, tanaman, proses panen, dan kemasan sayur Mayur Hydroponics di Purwokerto.",
+  description:
+    "Foto asli kebun Mayur Hydroponics di Purwokerto: greenhouse, LED grow light, bibit di netpot, panen bersama akar, dan sayur dalam kemasan.",
   path: "/galeri",
 });
 

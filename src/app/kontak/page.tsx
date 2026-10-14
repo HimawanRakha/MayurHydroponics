@@ -7,7 +7,7 @@ import { fullAddress, mapsUrl, siteConfig } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: "Kontak & Lokasi",
-  description: `Hubungi Mayur Hydroponics lewat WhatsApp ${siteConfig.whatsapp.display} atau Instagram ${siteConfig.instagram.handle}. Kantor pemasaran di Perumahan Puri Hijau, Karangklesem, Purwokerto Selatan.`,
+  description: `Hubungi Mayur Hydroponics lewat WhatsApp ${siteConfig.whatsapp.display} atau Instagram. Kantor pemasaran di Perumahan Puri Hijau, Karangklesem, Purwokerto Selatan.`,
   path: "/kontak",
 });
 

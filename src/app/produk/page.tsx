@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata = pageMetadata({
   title: "Sayur Hidroponik & Harga",
   description:
-    "Daftar sayur hidroponik Mayur Hydroponics Purwokerto: caisim, pokcoy, kangkung, bayam, selada, dan lainnya. Harga per bungkus, cara pesan lewat WhatsApp, dan program reseller.",
+    "Harga sayur hidroponik Mayur Hydroponics Purwokerto: caisim, pokcoy, kangkung, bayam, selada. Susun pesanan, kirim lewat WhatsApp, dan info reseller.",
   path: "/produk",
 });
 

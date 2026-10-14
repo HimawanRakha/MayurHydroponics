@@ -71,7 +71,7 @@ export function PageIntro({
         {image && (
           <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-sm lg:col-span-5 lg:max-w-none">
             <div className="relative aspect-[4/3] rotate-2 overflow-hidden rounded-card shadow-float ring-8 ring-white/90">
-              <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1024px) 35vw, 100vw" className="object-cover" />
+              <Image src={image.src} alt={image.alt} fill loading="eager" fetchPriority="high" sizes="(min-width: 1024px) 35vw, 100vw" className="object-cover" />
             </div>
           </div>
         )}

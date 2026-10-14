@@ -5,21 +5,33 @@
  * - "Asset Project Website/PROFILE 2022.pdf" (company profile)
  * - "Asset Project Website/katalog mayur 2025 2.jpg" (catalog 2025)
  * - Instagram bio @mayurhydroponics (checked 14 Oct 2026)
- * Confirmed for publication by the owner on 14 Oct 2026 (see docs/project-audit.md).
+ * Confirmed for publication by the owner on 14 Oct 2026.
  * Do not add facts here without a source.
  */
 
 const whatsappNumber = "628156976844";
 
+/**
+ * Production URL: NEXT_PUBLIC_SITE_URL, else the Vercel production domain.
+ * A production deploy without either fails the build instead of shipping
+ * canonical URLs that point at localhost.
+ */
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const url = explicit || (vercel ? `https://${vercel}` : undefined);
+  if (!url && process.env.VERCEL_ENV === "production") {
+    throw new Error("Set NEXT_PUBLIC_SITE_URL (mis. https://www.domain-anda.com) sebelum deploy produksi.");
+  }
+  return (url ?? "http://localhost:3000").replace(/\/$/, "");
+}
+
 export const siteConfig = {
   name: "Mayur Hydroponics",
   shortDescription:
     "Kebun sayur hidroponik keluarga di Purwokerto. Sayur ditanam di greenhouse tertutup, dipanen bersama akarnya, dan diantar ke rumah.",
-  /**
-   * Production URL. Set NEXT_PUBLIC_SITE_URL in the hosting environment once the
-   * domain is decided; canonical URLs, sitemap and Open Graph all derive from it.
-   */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  /** Canonical URLs, sitemap, Open Graph and JSON-LD all derive from this. */
+  url: resolveSiteUrl(),
   locale: "id_ID",
   logo: "/logo/mayur-hydroponics-logo.png",
 

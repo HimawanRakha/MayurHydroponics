@@ -17,7 +17,7 @@ export function SiteHeader() {
       </a>
       <div className="mx-auto flex h-[var(--header-height)] max-w-[80rem] items-center justify-between gap-4 rounded-full bg-surface pr-2 pl-5 shadow-float sm:pl-7">
         <Link href="/" className="shrink-0" aria-label={`${siteConfig.name}, ke beranda`}>
-          <Image src={siteConfig.logo} alt="" width={719} height={347} priority className="h-[3.7rem] w-auto" />
+          <Image src={siteConfig.logo} alt="" width={719} height={347} loading="eager" fetchPriority="high" className="h-[3.7rem] w-auto" />
         </Link>
 
         <nav aria-label="Navigasi utama" className="hidden lg:block">

@@ -29,7 +29,7 @@ export const metadata = pageMetadata({
   title: "Mayur Hydroponics | Sayur Hidroponik di Purwokerto",
   absoluteTitle: true,
   description:
-    "Mayur Hydroponics menanam caisim, pokcoy, selada, dan sayur daun lain di greenhouse tertutup di Purwokerto. Lihat harga, cara pesan lewat WhatsApp, dan gratis ongkir area Purwokerto.",
+    "Sayur hidroponik segar dari greenhouse di Purwokerto: caisim, pokcoy, selada, dan lainnya mulai Rp7.000. Pesan lewat WhatsApp, gratis ongkir se-Purwokerto.",
   path: "/",
 });
 
@@ -97,7 +97,8 @@ export default function HomePage() {
               src={images.lorongGreenhouse.src}
               alt=""
               fill
-              priority
+              loading="eager"
+              fetchPriority="high"
               sizes="(min-width: 1280px) 1216px, 100vw"
               className="-z-10 scale-110 object-cover opacity-60 blur-[2px]"
             />
@@ -117,7 +118,7 @@ export default function HomePage() {
                   <Image
                     src={pack.image}
                     alt={pack.alt}
-                    priority
+                    loading="eager"
                     sizes="(min-width: 1024px) 20vw, 45vw"
                     className="h-full w-auto drop-shadow-[0_18px_24px_rgb(0_0_0/0.4)]"
                   />

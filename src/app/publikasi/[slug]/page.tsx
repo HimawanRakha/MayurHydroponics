@@ -21,6 +21,8 @@ export async function generateMetadata({ params }: PageProps<"/publikasi/[slug]"
   const cover = images[article.coverImage];
   return pageMetadata({
     title: article.seoTitle ?? article.title,
+    // seoTitle already names the brand; skip the "| Mayur Hydroponics" suffix so it fits in search results.
+    absoluteTitle: Boolean(article.seoTitle),
     description: article.seoDescription ?? article.excerpt,
     path: `/publikasi/${article.slug}`,
     type: "article",
@@ -78,7 +80,7 @@ async function ArticleContent({ params }: { params: PageProps<"/publikasi/[slug]
         <Container>
           <figure>
             <div className="relative aspect-[16/9] overflow-hidden rounded-panel bg-mint-100 shadow-float">
-              <Image src={cover.src} alt={cover.alt} fill priority sizes="(min-width: 1240px) 1176px, 100vw" className="object-cover" />
+              <Image src={cover.src} alt={cover.alt} fill loading="eager" fetchPriority="high" sizes="(min-width: 1240px) 1176px, 100vw" className="object-cover" />
             </div>
             {cover.caption && <figcaption className="mt-2 text-sm text-fg-muted">{cover.caption}</figcaption>}
           </figure>
